@@ -118,7 +118,7 @@ export class GalleryNavbarView {
       }
 
       this.galleryTranslateX = (this.mainContainerView.getDoc().documentElement.clientWidth || this.mainContainerView.getDoc().body.clientWidth) / 2.5 - targetImageIdx * 52;
-      this.galleryListEl.style.transform = 'translateX(' + this.galleryTranslateX + 'px)';
+      // this.galleryListEl.style.transform = 'translateX(' + this.galleryTranslateX + 'px)';
     }
   }
 
@@ -126,7 +126,7 @@ export class GalleryNavbarView {
     this.galleryMouseDownClientX = 0;
     this.galleryTranslateX = 0;
     if (this.galleryListEl) {
-      this.galleryListEl.style.transform = 'translateX(0px)';
+      // this.galleryListEl.style.transform = 'translateX(0px)';
       // remove all childs (li) of gallery-list
       this.galleryListEl.innerHTML = '';
     }
@@ -310,7 +310,7 @@ export class GalleryNavbarView {
     if (this.galleryTranslateX + 50 >= windowWidth) this.galleryTranslateX = windowWidth - 50;
     if (0 > this.galleryTranslateX + imgLiWidth) this.galleryTranslateX = -imgLiWidth;
 
-    this.galleryListEl.style.transform = 'translateX(' + this.galleryTranslateX + 'px)';
+    //this.galleryListEl.style.transform = 'translateX(' + this.galleryTranslateX + 'px)';
   }
 
   private mouseUpGallery = (event: MouseEvent) => {

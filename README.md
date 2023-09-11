@@ -1,5 +1,9 @@
 <h1 align="center">Obsidian Image Toolkit</h1>
 
+```bash
+git remote add upstream git@github.com:sissilab/obsidian-image-toolkit.git
+```
+
 <p align="center">
     <img alt="Release version" src="https://img.shields.io/github/v/release/sissilab/obsidian-image-toolkit?style=for-the-badge">
     <img alt="Download count" src="https://img.shields.io/github/downloads/sissilab/obsidian-image-toolkit/total?style=for-the-badge">

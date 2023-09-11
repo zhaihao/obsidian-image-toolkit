@@ -152,11 +152,19 @@ export default class ImageToolkitPlugin extends Plugin {
     return imgEl && 'IMG' === imgEl.tagName;
   }
 
+  // 编辑模式不触发
   private isClickable = (targetEl: HTMLImageElement, event: MouseEvent): ContainerView => {
     let container: ContainerView;
-    if (this.isImageElement(targetEl)
+      if (
+        this.isImageElement(targetEl)
       && (container = this.containerFactory.getContainer(targetEl))
-      && container.checkHotkeySettings(event, this.settings.viewTriggerHotkey)) {
+      && container.checkHotkeySettings(event, this.settings.viewTriggerHotkey)
+        //  @ts-ignore
+      && app.workspace.activeEditor?.currentMode.type === "preview"
+          // 过滤掉 auto card
+          && !targetEl.hasClass("auto-card-link-thumbnail-img")
+          && !targetEl.hasClass("auto-card-link-favicon")
+    ) {
       return container;
     }
     return null;

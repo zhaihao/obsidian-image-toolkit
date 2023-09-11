@@ -5,7 +5,7 @@
   "main": "src/main.js",
   "scripts": {
     "dev": "rollup --config rollup.config.js -w",
-    "build": "rollup --config rollup.config.js --environment BUILD:production"
+    "build": "rollup --config rollup.config.js --environment BUILD:production && cp styles.css manifest.json main.js '/Users/zhaihao/Documents/ORISON/.obsidian/plugins/obsidian-image-toolkit'"
   },
   "keywords": [],
   "author": "",
